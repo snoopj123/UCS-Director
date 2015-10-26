@@ -6,7 +6,7 @@ $uscs_gspt = ($args[1].Split(";"))[2]  # Passing a UCS Director variable and get
 $customer_id = $args[2]  # Passing a string for usage in creating the name of the service profile
 $device_sid = $args[3]  # Passing a string for usage in creating the name of the service profile
 
-$ucsc_username = "<insert UCS Central username"
+$ucsc_username = "<insert UCS Central username>"
 $ucsc_password = ConvertTo-SecureString -String "<insert UCS Central account password or variable, if passing through UCS Director" -AsPlainText -Force
 $ucsc_credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $ucsc_username, $ucsc_password
 $ucsc_conn = Connect-UcsCentral -Name <insert UCS Central FQDN or IP address> -Credential $ucsc_credential
